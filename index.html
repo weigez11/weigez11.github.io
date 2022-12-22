@@ -375,4 +375,21 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 
 	</body>
+			  <script>
+		    // 获取页脚元素
+		    var footerElement = document.getElementById("footer");
+
+		    // 定义一个函数，用于更新页脚中的时间
+		    function updateTime() {
+		      // 获取当前时间
+		      var currentTime = new Date();
+		      // 将当前时间转换为字符串
+		      var currentTimeString = currentTime.toLocaleString();
+		      // 在页脚元素中显示当前时间
+		      footerElement.innerHTML = "CURRENT TIME：" + currentTimeString;
+		    }
+
+		    // 使用 setInterval 函数每秒调用 updateTime 函数一次
+		    setInterval(updateTime, 1000);
+		  </script>
 </html>
