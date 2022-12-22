@@ -349,15 +349,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<script>
-							var weekDayLabels = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-							var now = new Date();
-							var year=now.getFullYear();
-							var month=now.getMonth()+1;
-							var day=now.getDate()
-							var currentime = '<span class="special">'+'CURRENT TIME:'+year+'year'+mon+'month'+day+'day                '+weekDayLabels[now.getDay()]+'</span><br>'
-							document.write(currentime)
-						</script>
+						<span id="time"> <!-- 在这里显示当前时间 --> </span>
 						<span id="runtime_span">Running Time: 0 day 0 hour 0 min 0 min 0 sec</span><script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);X=new Date("12/21/2022 21:00:00");Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);runtime_span.innerHTML="RUNNING TIME: "+A+" DAY "+B+" HOUR "+C+" MIN "+D+" SEC"}show_runtime();</script>
 						<p class="copyright">&copy; WeigeJt SY_L Design.</p>
 					</footer>
@@ -375,18 +367,18 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 
 	</body>
-			  <script>
-		    // 获取页脚元素
-		    var footerElement = document.getElementById("footer");
+		  <script>
+		    // 获取时间元素
+		    var timeElement = document.getElementById("time");
 
-		    // 定义一个函数，用于更新页脚中的时间
+		    // 定义一个函数，用于更新时间元素中的时间
 		    function updateTime() {
 		      // 获取当前时间
 		      var currentTime = new Date();
 		      // 将当前时间转换为字符串
 		      var currentTimeString = currentTime.toLocaleString();
-		      // 在页脚元素中显示当前时间
-		      footerElement.innerHTML = "CURRENT TIME：" + currentTimeString;
+		      // 在时间元素中显示当前时间
+		      timeElement.innerHTML = currentTimeString;
 		    }
 
 		    // 使用 setInterval 函数每秒调用 updateTime 函数一次
