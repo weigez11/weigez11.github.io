@@ -126,35 +126,10 @@
 								</ul>
 							</article>
 						
-						<!-- Music -->
-							<article id="music">
-								<div style="position: fixed; bottom: 0; left: 0;">
-									<audio id="player" controls>
-									<source src="audio/qifengle.mp3" type="audio/mpeg">
-									 Your browser does not support the audio element.
-									</audio>
-
-									<br>
-									<select id="song-select" onchange="changeSong(0)">
-									    <option value="audio/qifengle.mp3">起风了</option>
-									    <option value="audio/dayuezaidongji.mp3">大约在冬季</option>
-									    <option value="audio/youmeiyourcgsn.mp3">有没有人曾告诉你</option>
-									</select>
-								 </div>
-									<script>
-										var currentSongIndex;
-										function changeSong(offset) {
-										    if (offset === 0) {
-											// Change song based on selection in song-select dropdown list
-											var songSelect = document.getElementById('song-select');
-											var songUrl = songSelect.value;
-										    } 
-										    var player = document.getElementById('player');
-										    player.src = songUrl;
-										    player.play();
-										}
-									 </script>
-								
+						<!-- Connect -->
+							<article id="connect">
+								<h2 class="major">联系我</h2>
+	
 								<ul class="icons">
 									<li><a href="https://twitter.com/" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="https://www.facebook.com/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -165,6 +140,32 @@
 							</article>
 						
 					</div>	
+					<div style="position: fixed; bottom: 0; center: 0;">
+						<audio id="player" controls>
+							<source src="audio/qifengle.mp3" type="audio/mpeg">
+							 Your browser does not support the audio element.
+						</audio>
+						<br>
+						<select id="song-select" onchange="changeSong(0)">
+						    <option value="audio/qifengle.mp3">起风了</option>
+						    <option value="audio/dayuezaidongji.mp3">大约在冬季</option>
+						    <option value="audio/youmeiyourcgsn.mp3">有没有人曾告诉你</option>
+						</select>
+					 </div>
+					<script>
+						var currentSongIndex;
+						function changeSong(offset) {
+						    if (offset === 0) {
+							// Change song based on selection in song-select dropdown list
+							var songSelect = document.getElementById('song-select');
+							var songUrl = songSelect.value;
+						    } 
+						    var player = document.getElementById('player');
+						    player.src = songUrl;
+						    player.play();
+						}
+					</script>
+				
 				<div style="position: fixed; bottom: 0; right: 0;">
 					<a href="https://twitter.com/" class="icon brands fa-twitter"><span class="label">Twitter</span></a>
 					<a href="https://www.facebook.com/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
